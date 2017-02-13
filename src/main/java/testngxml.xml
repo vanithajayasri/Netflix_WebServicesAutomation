@@ -8,7 +8,4 @@
                      <class name="rest.automation.netflix.TestClass" />
               </classes>
        </test>
-
-
-
 </suite>
