@@ -15,15 +15,7 @@
   </properties>
 
   <dependencies>
-    <plugins>
-    <plugin>
-        <artifactId>maven-compiler-plugin</artifactId>
-        <version>3.1</version>
-        <configuration>
-            <fork>true</fork>
-        </configuration>
-    </plugin>
-</plugins>
+  
     	<dependency>
 	<groupId>org.apache.httpcomponents</groupId>
 	<artifactId>httpclient</artifactId>
@@ -68,4 +60,22 @@
   
 
   </dependencies>
+  <build>
+  	<plugins>
+  	<plugin>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <version>3.1</version>
+        <configuration>
+            <fork>true</fork>
+        </configuration>
+    </plugin>
+  		
+  	
+  	</plugins>
+  
+  
+  </build>
+  
+  
+  
 </project>
