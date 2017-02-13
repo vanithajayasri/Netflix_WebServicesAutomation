@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
+  <test name="searchMovies(failed)">
+    <classes>
+      <class name="rest.automation.netflix.TestClass">
+        <methods>
+          <include name="TestValidateResponse" invocation-numbers="0"/>
+        </methods>
+      </class> <!-- rest.automation.netflix.TestClass -->
+    </classes>
+  </test> <!-- searchMovies(failed) -->
+</suite> <!-- Failed suite [Suite] -->

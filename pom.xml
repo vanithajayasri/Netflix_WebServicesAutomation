@@ -1,0 +1,62 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>rest.automation</groupId>
+  <artifactId>netflix</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <packaging>jar</packaging>
+
+  <name>netflix</name>
+  <url>http://maven.apache.org</url>
+
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+  </properties>
+
+  <dependencies>
+    	<dependency>
+	<groupId>org.apache.httpcomponents</groupId>
+	<artifactId>httpclient</artifactId>
+	<version>4.1.1</version>
+	</dependency>
+  <!-- https://mvnrepository.com/artifact/org.codehaus.jackson/jackson-mapper-asl -->
+<dependency>
+    <groupId>org.codehaus.jackson</groupId>
+    <artifactId>jackson-mapper-asl</artifactId>
+    <version>1.5.0</version>
+</dependency>
+  
+<dependency>
+    <groupId>com.sun.jersey</groupId>
+    <artifactId>jersey-client</artifactId>
+    <version>1.19.3</version>
+</dependency>
+<dependency>
+    <groupId>com.google.code.gson</groupId>
+    <artifactId>gson</artifactId>
+    <version>2.8.0</version>
+</dependency>
+		<dependency>
+	    <groupId>org.testng</groupId>
+	    <artifactId>testng</artifactId>
+	    <version>6.9.13.6</version>
+	</dependency>
+	<!-- https://mvnrepository.com/artifact/com.googlecode.json-simple/json-simple -->
+<dependency>
+    <groupId>com.googlecode.json-simple</groupId>
+    <artifactId>json-simple</artifactId>
+    <version>1.1</version>
+</dependency>
+	<!-- https://mvnrepository.com/artifact/org.json/json -->
+<dependency>
+    <groupId>org.json</groupId>
+    <artifactId>json</artifactId>
+    <version>20090211</version>
+</dependency>
+	
+	
+  
+
+  </dependencies>
+</project>
