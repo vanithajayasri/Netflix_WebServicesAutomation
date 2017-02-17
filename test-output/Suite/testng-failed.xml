@@ -5,7 +5,7 @@
     <classes>
       <class name="rest.automation.netflix.TestClass">
         <methods>
-          <include name="TestValidateResponse" invocation-numbers="0"/>
+          <include name="TestValidateResponse"/>
         </methods>
       </class> <!-- rest.automation.netflix.TestClass -->
     </classes>

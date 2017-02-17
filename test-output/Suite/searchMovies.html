@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>searchMovies</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>0/1/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>0/0/1</td>
 </tr><tr>
-<td>Started on:</td><td>Sun Feb 12 20:10:01 PST 2017</td>
+<td>Started on:</td><td>Tue Feb 14 20:49:22 PST 2017</td>
 </tr>
-<tr><td>Total time:</td><td>1 seconds (1011 ms)</td>
+<tr><td>Total time:</td><td>16 seconds (16203 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -67,35 +67,52 @@ function toggleAllBoxes() {
 </tr>
 </table><p/>
 <small><i>(Hover the method name to see the test class name)</i></small><p/>
-<table width='100%' border='1' class='invocation-failed'>
-<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<table width='100%' border='1' class='invocation-skipped'>
+<tr><td colspan='4' align='center'><b>SKIPPED TESTS</b></td></tr>
 <tr><td><b>Test method</b></td>
 <td width="30%"><b>Exception</b></td>
 <td width="10%"><b>Time (seconds)</b></td>
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='rest.automation.netflix.TestClass.TestValidateResponse()'><b>TestValidateResponse</b><br>Test class: rest.automation.netflix.TestClass<br>Parameters: Titanic, 35, 1181461, Titanic, 1997, James Cameron</td>
-<td><div><pre>java.lang.AssertionError: unit not matches expected [35] but found [352]
-	at rest.automation.netflix.TestClass.validateResponse(TestClass.java:68)
-	at rest.automation.netflix.TestClass.TestValidateResponse(TestClass.java:46)
-... Removed 30 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace2130772866", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace2130772866'><pre>java.lang.AssertionError: unit not matches expected [35] but found [352]
-	at org.testng.Assert.fail(Assert.java:94)
-	at org.testng.Assert.failNotEquals(Assert.java:513)
-	at org.testng.Assert.assertEqualsImpl(Assert.java:135)
-	at org.testng.Assert.assertEquals(Assert.java:116)
-	at org.testng.Assert.assertEquals(Assert.java:389)
-	at rest.automation.netflix.TestClass.validateResponse(TestClass.java:68)
-	at rest.automation.netflix.TestClass.TestValidateResponse(TestClass.java:46)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:100)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:646)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:811)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1137)
+<td title='rest.automation.netflix.TestClass.TestValidateResponse()'><b>TestValidateResponse</b><br>Test class: rest.automation.netflix.TestClass</td>
+<td><div><pre>java.lang.RuntimeException: mapping values are not allowed here
+ in &quot;&lt;reader&gt;&quot;, line 3, column 11:
+    testObject:
+              ^
+
+Caused by: mapping values are not allowed here
+ in &quot;&lt;reader&gt;&quot;, line 3, column 11:
+    testObject:
+              ^
+
+	at org.yaml.snakeyaml.scanner.ScannerImpl.fetchValue(ScannerImpl.java:742)
+	at org.yaml.snakeyaml.scanner.ScannerImpl.fetchMoreTokens(ScannerImpl.java:304)
+	at org.yaml.snakeyaml.scanner.ScannerImpl.peekToken(ScannerImpl.java:201)
+	at org.yaml.snakeyaml.parser.ParserImpl$ParseDocumentEnd.produce(ParserImpl.java:266)
+	at org.yaml.snakeyaml.parser.ParserImpl.peekEvent(ParserImpl.java:162)
+	at org.yaml.snakeyaml.parser.ParserImpl.getEvent(ParserImpl.java:172)
+	at org.yaml.snakeyaml.composer.Composer.composeDocument(Composer.java:123)
+	at org.yaml.snakeyaml.composer.Composer.getNode(Composer.java:83)
+	at org.yaml.snakeyaml.constructor.BaseConstructor.getData(BaseConstructor.java:101)
+	at org.yaml.snakeyaml.Loader$1.next(Loader.java:64)
+	at rest.automation.netflix.BaseYAMLDataProvider.&lt;init&gt;(BaseYAMLDataProvider.java:47)
+	at rest.automation.netflix.NetflixYamlProvider.&lt;init&gt;(NetflixYamlProvider.java:24)
+	at rest.automation.netflix.NetflixYamlProvider.getNetflixTestData(NetflixYamlProvider.java:79)
+	at rest.automation.netflix.Dataprovider.getTestDataFromYaml(Dataprovider.java:16)
+	... 22 more
+... Removed 30 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace2030538903", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace2030538903'><pre>java.lang.RuntimeException: mapping values are not allowed here
+ in &quot;&lt;reader&gt;&quot;, line 3, column 11:
+    testObject:
+              ^
+
+	at org.testng.internal.MethodInvocationHelper.invokeMethodNoCheckedException(MethodInvocationHelper.java:45)
+	at org.testng.internal.MethodInvocationHelper.invokeDataProvider(MethodInvocationHelper.java:113)
+	at org.testng.internal.Parameters.handleParameters(Parameters.java:436)
+	at org.testng.internal.Invoker.handleParameters(Invoker.java:1253)
+	at org.testng.internal.Invoker.createParameters(Invoker.java:980)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1070)
 	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
 	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
 	at org.testng.TestRunner.privateRun(TestRunner.java:753)
@@ -113,9 +130,36 @@ function toggleAllBoxes() {
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:126)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:152)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:57)
+Caused by: mapping values are not allowed here
+ in &quot;&lt;reader&gt;&quot;, line 3, column 11:
+    testObject:
+              ^
+
+	at org.yaml.snakeyaml.scanner.ScannerImpl.fetchValue(ScannerImpl.java:742)
+	at org.yaml.snakeyaml.scanner.ScannerImpl.fetchMoreTokens(ScannerImpl.java:304)
+	at org.yaml.snakeyaml.scanner.ScannerImpl.peekToken(ScannerImpl.java:201)
+	at org.yaml.snakeyaml.parser.ParserImpl$ParseDocumentEnd.produce(ParserImpl.java:266)
+	at org.yaml.snakeyaml.parser.ParserImpl.peekEvent(ParserImpl.java:162)
+	at org.yaml.snakeyaml.parser.ParserImpl.getEvent(ParserImpl.java:172)
+	at org.yaml.snakeyaml.composer.Composer.composeDocument(Composer.java:123)
+	at org.yaml.snakeyaml.composer.Composer.getNode(Composer.java:83)
+	at org.yaml.snakeyaml.constructor.BaseConstructor.getData(BaseConstructor.java:101)
+	at org.yaml.snakeyaml.Loader$1.next(Loader.java:64)
+	at rest.automation.netflix.BaseYAMLDataProvider.&lt;init&gt;(BaseYAMLDataProvider.java:47)
+	at rest.automation.netflix.NetflixYamlProvider.&lt;init&gt;(NetflixYamlProvider.java:24)
+	at rest.automation.netflix.NetflixYamlProvider.getNetflixTestData(NetflixYamlProvider.java:79)
+	at rest.automation.netflix.Dataprovider.getTestDataFromYaml(Dataprovider.java:16)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:100)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:51)
+	at org.testng.internal.MethodInvocationHelper.invokeMethodNoCheckedException(MethodInvocationHelper.java:41)
+	... 22 more
 </pre></div></td>
 <td>0</td>
-<td>rest.automation.netflix.TestClass@62ee68d8</td></tr>
+<td>rest.automation.netflix.TestClass@10e92f8f</td></tr>
 </table><p>
 </body>
 </html>

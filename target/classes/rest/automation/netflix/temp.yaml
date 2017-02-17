@@ -1,0 +1,28 @@
+#################################### 
+--- !!rest.automation.netflix.NetflixTestData
+testObject:
+  testMethod: testSearchMovie
+  testTitle: testMovie
+  testCaseId: 3
+resourceMetaData:
+  - searchData:
+      searchRequest:
+        director: James%20Cameron
+      searchResponse:
+        movieList:
+          - unit: 380
+            show_id: 1032625
+            show_title: The Terminator
+            release_year: 1984
+            director: James Cameron        
+          - unit: 1001
+            show_id: 60028202
+            show_title: "Terminator 2: Judgment Day"
+            release_year: 1991
+            director: James Cameron        
+          - unit: 352
+            show_id: 1181461
+            show_title: Titanic
+            release_year: 1997
+            director: James Cameron
+################################################################## 

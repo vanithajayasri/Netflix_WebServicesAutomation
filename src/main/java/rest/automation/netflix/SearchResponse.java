@@ -8,7 +8,6 @@ public class SearchResponse {
 
 	public SearchResponse() {
 		super();
-		// TODO Auto-generated constructor stub
 	}
 
 	public SearchResponse(LinkedList<Movie> movieList) {
