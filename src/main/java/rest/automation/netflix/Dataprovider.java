@@ -9,7 +9,7 @@ import org.testng.annotations.DataProvider;
 
 public class Dataprovider {
 	
-	private final String yamlPath = "rest/automation/netflix/temp.yaml";
+	private final String yamlPath = "rest/automation/netflix/search.yaml";
 	
 	@DataProvider(name = "netflix")
 	public Iterator<Object[]> getTestDataFromYaml(Method testMethod, ITestContext testContext) throws Exception{
