@@ -2,12 +2,12 @@
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="1256" started-at="2017-02-17T04:47:24Z" finished-at="2017-02-17T04:47:26Z">
+  <suite name="Default suite" duration-ms="1650" started-at="2017-02-17T07:46:58Z" finished-at="2017-02-17T07:47:00Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="1256" started-at="2017-02-17T04:47:24Z" finished-at="2017-02-17T04:47:26Z">
+    <test name="Default test" duration-ms="1650" started-at="2017-02-17T07:46:58Z" finished-at="2017-02-17T07:47:00Z">
       <class name="rest.automation.netflix.TestClass">
-        <test-method status="PASS" signature="TestValidateResponse(rest.automation.netflix.NetflixTestData)[pri:0, instance:rest.automation.netflix.TestClass@396a51ab]" name="TestValidateResponse" duration-ms="985" started-at="2017-02-16T20:47:25Z" data-provider="netflix" finished-at="2017-02-16T20:47:26Z">
+        <test-method status="PASS" signature="TestValidateResponse(rest.automation.netflix.NetflixTestData)[pri:0, instance:rest.automation.netflix.TestClass@396a51ab]" name="TestValidateResponse" duration-ms="1400" started-at="2017-02-16T23:46:59Z" data-provider="netflix" finished-at="2017-02-16T23:47:00Z">
           <params>
             <param index="0">
               <value>

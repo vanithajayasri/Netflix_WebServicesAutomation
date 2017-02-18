@@ -1,0 +1,13 @@
+rest\automation\netflix\Movie.class
+rest\automation\netflix\NetflixYamlProvider.class
+rest\automation\netflix\SearchResponse.class
+rest\automation\netflix\TestObject.class
+rest\automation\netflix\Dataprovider.class
+rest\automation\netflix\TestClass.class
+rest\automation\netflix\BaseYAMLDataProvider.class
+rest\automation\netflix\SearchData.class
+rest\automation\netflix\Response.class
+rest\automation\netflix\NetflixTestData.class
+rest\automation\netflix\ResourceMetaData.class
+rest\automation\netflix\SearchRequest.class
+rest\automation\netflix\ReusableMethods.class
