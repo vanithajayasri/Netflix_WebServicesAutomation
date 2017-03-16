@@ -2,7 +2,7 @@ package rest.automation.netflix;
 
 /*
 1. Linked list traversal.
-2. How yo reverse the linked list using one pass
+2. How you reverse the linked list using one pass
 3. How to find middle node of linked list using one pass.
 4. How to find a linked list is circular or not ?*/
 

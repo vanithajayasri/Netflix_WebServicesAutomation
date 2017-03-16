@@ -26,22 +26,21 @@ public class ReusableMethods {
 	public static SearchResponse apiSetup(NetflixTestData netflixTestData , String uri){
 		try{
 					
-					//client setup
-					DefaultHttpClient httpClient = new DefaultHttpClient();
-					//String url = uri+netflixTestData.getResourceMetaData().getLast().getSearchData().getSearchRequest().getTitle();
-					HttpGet getRequest = new HttpGet(uri);
-					
-					//Call API	
-					HttpResponse response = httpClient.execute(getRequest);
-					String result = EntityUtils.toString(response.getEntity());
-					 sr1 = parseResponse(result);
-					System.out.println(sr1.getMovieList());
-					
-					//Validate Response
-					if (response.getStatusLine().getStatusCode() != 200) {
-						throw new RuntimeException("Failed : HTTP error code : "
-						   + response.getStatusLine().getStatusCode());
-			       }
+				//client setup
+				DefaultHttpClient httpClient = new DefaultHttpClient();
+				HttpGet getRequest = new HttpGet(uri);
+				
+				//Call API	
+				HttpResponse response = httpClient.execute(getRequest);
+				String result = EntityUtils.toString(response.getEntity());
+				sr1 = parseResponse(result);
+				System.out.println(sr1.getMovieList());
+				
+				//Validate Response
+				if (response.getStatusLine().getStatusCode() != 200) {
+					throw new RuntimeException("Failed : HTTP error code : "
+					   + response.getStatusLine().getStatusCode());
+		       }
 		}
 	    catch(Exception e){
 			e.printStackTrace();
@@ -49,12 +48,13 @@ public class ReusableMethods {
 		return sr1;
 	}	
 	
-	public static SearchResponse parseResponse(String result){
+	public static SearchResponse parseResponse(String result) {
 		Gson gson = new Gson();
 		String res1 = result.substring(0);
 		res1 = "{\"movieList\":"+res1+"}";
 		System.out.println(res1);
-		return(gson.fromJson(res1, SearchResponse.class));
+		SearchResponse response = gson.fromJson(res1, SearchResponse.class);
+		return(response);
 	}
 	
 	public static void validateResponse(SearchResponse expectedResponse, SearchResponse actualResponse){
@@ -68,13 +68,11 @@ public class ReusableMethods {
 			 expr = expectedResponse.getMovieList().get(i);
 			 actr = actualResponse.getMovieList().get(i);
 			 hmExpected.put(expr.getUnit(), expr);
-			
-			if(!(hmActual.containsKey(actr.getUnit()))){
+			 if(!(hmActual.containsKey(actr.getUnit()))){
 				hmActual.put(actr.getUnit(), actr);
-			}
+			 }
 		}	
 		Set<Integer> hme = hmExpected.keySet();
-		
 		for(int key : hme){
 			if(hmActual.containsKey(key)){
 				Movie valuesExp = hmExpected.get(key);
@@ -87,18 +85,11 @@ public class ReusableMethods {
 			}
 			else{
 				Assert.fail("Actual Response does not have movie with unit- "+key);
-				
 			}
 		}
-			
-		
-
-		
 	}
 	
-
-	
-	public static  Object[][]  readxls(String fileName , String sheetName) throws IOException {
+/*	public static  Object[][]  readxls(String fileName, String sheetName) throws IOException 
 		
 		// get the filepath
 		File xlfile = new File(fileName);
@@ -123,7 +114,7 @@ public class ReusableMethods {
 				}
 			}
 		return xlData;	
-	}	
+	}*/	
 }
 
 
